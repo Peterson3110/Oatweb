@@ -24,11 +24,9 @@ class Estoque(models.Model):
         (ARPAS, 'Arpas'),
     ]
 
-
-    nome = models.CharField('Nome da Encomenda',max_length=100)
-    endereco = models.CharField('Endereço',max_length=100)
-    instru = models.CharField('Escolha o Produto', max_length=8, choices=INSTRUMENTOS, default=GUITARRA, )
+    instru = models.CharField('Escolha o Produto', max_length=8, choices=INSTRUMENTOS, default=GUITARRA,)
     quantidade = models.BigIntegerField("Quantidade de Produtos",max_length=20)
+    endereco = models.CharField('Endereço', max_length=100)
     fornecedor = models.CharField(max_length=100)
 
     def str(self):
